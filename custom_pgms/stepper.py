@@ -76,7 +76,7 @@ for a in range(0, 100):
     else:
       GPIO.output(xpin, False)
 
-  if a == 0:
+  if (a%2) == 0:
     print 'in if'
     StepDir = 1
   else:
