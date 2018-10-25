@@ -43,7 +43,9 @@ for pin in StepPins:
 Seq = [[1,0,0,1],
        [1,0,0,0],
        [1,1,0,0],
-       [0,1,0,0]]
+       [0,1,0,0],
+       [1,1,0,0],
+       [1,0,0,0],]
 
 StepCount = len(Seq)
 StepDir = 1 # Set to 1 or 2 for clockwise
