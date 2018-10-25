@@ -63,7 +63,8 @@ else:
 StepCounter = 0
 
 # Start main loop
-while True:
+# while True:
+for a in range(0, 100):
   print StepCounter,
   print Seq[StepCounter]
 
@@ -75,9 +76,11 @@ while True:
     else:
       GPIO.output(xpin, False)
 
-  if (pin % 2) == 0:
+  if a == 0:
+    print 'in if'
     StepDir = 1
   else:
+    print 'in else'
     StepDir = -1
 
   print "StepDir %i" %(StepDir)
