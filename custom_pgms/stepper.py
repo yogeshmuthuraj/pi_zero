@@ -64,33 +64,31 @@ StepCounter = 0
 
 # Start main loop
 while True:
-  for i in range(0, 2):
-    print i
-    if i == 0:
-      StepDir = 1
+  print "StepDir %i" %(StepDir)
+  print StepCounter,
+  print Seq[StepCounter]
+
+  for pin in range(0, 4):
+    xpin = StepPins[pin]
+    if Seq[StepCounter][pin]!=0:
+      print " Enable GPIO %i" %(xpin)
+      GPIO.output(xpin, True)
     else:
-      StepDir = -1
+      GPIO.output(xpin, False)
 
-    print "StepDir %i" %(StepDir)
-    print StepCounter,
-    print Seq[StepCounter]
+  if (pin % 2) == 0:
+    StepDir = 1
+  else:
+    StepDir = -1
 
-    for pin in range(0, 4):
-      xpin = StepPins[pin]
-      if Seq[StepCounter][pin]!=0:
-        print " Enable GPIO %i" %(xpin)
-        GPIO.output(xpin, True)
-      else:
-        GPIO.output(xpin, False)
+  StepCounter += StepDir
 
-    StepCounter += StepDir
+  # If we reach the end of the sequence
+  # start again
+  if (StepCounter>=StepCount):
+    StepCounter = 0
+  if (StepCounter<0):
+    StepCounter = StepCount+StepDir
 
-    # If we reach the end of the sequence
-    # start again
-    if (StepCounter>=StepCount):
-      StepCounter = 0
-    if (StepCounter<0):
-      StepCounter = StepCount+StepDir
-
-    # Wait before moving on
-    time.sleep(WaitTime)
+  # Wait before moving on
+  time.sleep(WaitTime)
