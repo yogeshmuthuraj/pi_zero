@@ -11,15 +11,22 @@ p.start(7.5)
 
 try:
     while True:
-        p.ChangeDutyCycle(7.5)  # turn towards 90 degree
-        time.sleep(2) # sleep 1 second
-        p.stop()
-        p.ChangeDutyCycle(2.5)  # turn towards 0 degree
-        # p.stop()
-        time.sleep(5) # sleep 1 second
-        p.ChangeDutyCycle(12.5) # turn towards 180 degree
-        # p.stop()
-        time.sleep(5) # sleep 1 second
+        p.ChangeDutyCycle(5)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(7.5)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(10)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(12.5)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(10)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(7.5)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(5)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(2.5)
+        time.sleep(0.5)
 except KeyboardInterrupt:
     p.stop()
     GPIO.cleanup()
