@@ -65,6 +65,7 @@ StepCounter = 0
 # Start main loop
 while True:
   for i in range(0, 2):
+    print i
     if i == 0:
       StepDir = 1
     else:
