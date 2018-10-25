@@ -43,11 +43,7 @@ for pin in StepPins:
 Seq = [[1,0,0,1],
        [1,0,0,0],
        [1,1,0,0],
-       [0,1,0,0],
-       [0,1,1,0],
-       [0,0,1,0],
-       [0,0,1,1],
-       [0,0,0,1]]
+       [0,1,0,0]]
 
 StepCount = len(Seq)
 StepDir = 1 # Set to 1 or 2 for clockwise
@@ -67,7 +63,7 @@ while True:
 
   print StepCounter,
   print Seq[StepCounter]
-  StepDir = 1
+
   for pin in range(0, 4):
     xpin = StepPins[pin]
     if Seq[StepCounter][pin]!=0:
@@ -75,7 +71,6 @@ while True:
       GPIO.output(xpin, True)
     else:
       GPIO.output(xpin, False)
-    StepDir = -1
 
   StepCounter += StepDir
 
