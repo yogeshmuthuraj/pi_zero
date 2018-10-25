@@ -64,7 +64,6 @@ StepCounter = 0
 
 # Start main loop
 while True:
-  print "StepDir %i" %(StepDir)
   print StepCounter,
   print Seq[StepCounter]
 
@@ -80,6 +79,8 @@ while True:
     StepDir = 1
   else:
     StepDir = -1
+
+  print "StepDir %i" %(StepDir)
 
   StepCounter += StepDir
 
