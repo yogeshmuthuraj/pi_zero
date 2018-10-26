@@ -15,8 +15,8 @@ try:
         p.ChangeDutyCycle(5)
         print '5'
         time.sleep(0.2)
-        p.ChangeDutyCycle(6)
-        print '6'
+        p.ChangeDutyCycle(7)
+        print '7'
         time.sleep(0.2)
 except KeyboardInterrupt:
     p.stop()
