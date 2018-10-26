@@ -13,10 +13,12 @@ p.start(7.5)
 try:
     while True:
         p.ChangeDutyCycle(5)
-        print '5'
         time.sleep(0.5)
-        p.ChangeDutyCycle(7.5)
-        print '7.5'
+        p.ChangeDutyCycle(6)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(7)
+        time.sleep(0.5)
+        p.ChangeDutyCycle(6)
         time.sleep(0.5)
 except KeyboardInterrupt:
     p.stop()
