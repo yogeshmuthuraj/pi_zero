@@ -18,24 +18,6 @@ try:
         p.ChangeDutyCycle(7.5)
         print '7.5'
         time.sleep(2)
-        p.ChangeDutyCycle(10)
-        print '10'
-        time.sleep(2)
-        p.ChangeDutyCycle(12.5)
-        print '12.5'
-        time.sleep(2)
-        p.ChangeDutyCycle(10)
-        print '10'
-        time.sleep(2)
-        p.ChangeDutyCycle(7.5)
-        print '7.5'
-        time.sleep(2)
-        p.ChangeDutyCycle(5)
-        print '5'
-        time.sleep(2)
-        p.ChangeDutyCycle(2.5)
-        print '2.5'
-        time.sleep(2)
 except KeyboardInterrupt:
     p.stop()
     GPIO.cleanup()
