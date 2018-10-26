@@ -14,10 +14,10 @@ try:
     while True:
         p.ChangeDutyCycle(5)
         print '5'
-        time.sleep(2)
+        time.sleep(0.5)
         p.ChangeDutyCycle(7.5)
         print '7.5'
-        time.sleep(2)
+        time.sleep(0.5)
 except KeyboardInterrupt:
     p.stop()
     GPIO.cleanup()
