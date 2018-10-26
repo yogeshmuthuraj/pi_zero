@@ -12,10 +12,10 @@ p.start(7.5)
 
 try:
     while True:
-        GPIO.output(16, True)
+        GPIO.output(38, True)
         p.ChangeDutyCycle(5)
         time.sleep(2)
-        GPIO.output(16, False)
+        GPIO.output(38, False)
         p.ChangeDutyCycle(7.5)
         time.sleep(2)
         p.ChangeDutyCycle(10)
