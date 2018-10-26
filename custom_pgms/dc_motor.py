@@ -24,6 +24,9 @@ try:
         p.ChangeDutyCycle(10)
         print '10'
         time.sleep(1)
+        p.ChangeDutyCycle(12)
+        print '12'
+        time.sleep(1)
 except KeyboardInterrupt:
     p.stop()
     GPIO.cleanup()
